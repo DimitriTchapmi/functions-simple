@@ -7,10 +7,23 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- script: echo Hello, Dior!
-  displayName: 'Run a one-line script'
+  - script: |
+      npm install
+    displayName: "npm install"
 
-- script: |
-    echo Pipeline fait par Dimitri.
-    echo Voir https://aka.ms/yaml pour la syntaxe et les options disponibles
-  displayName: 'Run a multi-line script'
+  - task: ArchiveFiles@2
+     displayName: "Archive files"
+     inputs:
+       rootFolderOrFile: "$(System.DefaultWorkingDirectory)"
+       includeRootFolder: false
+       archiveFile: "$(System.DefaultWorkingDirectory)/$(Build.BuildId).zip"
+       
+  - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(System.DefaultWorkingDirectory)'
+        name: 'drop'
+       
+  #- script: |
+  #   echo Pipeline fait par Dimitri.
+  #    echo Voir https://aka.ms/yaml pour la syntaxe et les options disponibles
+  #  displayName: 'Run a multi-line script'
