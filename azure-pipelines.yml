@@ -1,0 +1,16 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+pool:
+  vmImage: 'Ubuntu 16.04'
+
+steps:
+- script: echo Hello, Dior!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Pipeline fait par Dimitri.
+    echo Voir https://aka.ms/yaml pour la syntaxe et les options disponibles
+  displayName: 'Run a multi-line script'
