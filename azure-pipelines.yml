@@ -8,11 +8,11 @@ pool:
 
 steps:
   - script: npm install
-    workingDirectory: "./hello"
+    workingDirectory: ./hello
     displayName: "npm install into hello directory"
 
   - script: npm install
-    workingDirectory: "./hello2"
+    workingDirectory: ./hello2
     displayName: "npm install into hello2 directory"
 
   - task: ArchiveFiles@2
