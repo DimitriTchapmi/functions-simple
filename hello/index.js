@@ -4,7 +4,6 @@ module.exports = async function(context, req) {
   context.res = {
     // status: 200, /* Defaults to 200 */
     body:
-      "Welcome to this super simple function!"
-      "Wes we did it!"
+      "Welcome to this super simple function! Wes we did it!"
   };
 };
