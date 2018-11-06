@@ -9,7 +9,14 @@ pool:
 steps:
   - script: |
       npm install
-    displayName: "npm install"
+    workingDirectory: hello
+    displayName: "npm install into hello directory"
+
+  - script: |
+      npm install
+    workingDirectory: hello2
+    displayName: "npm install into hello directory"
+
 
   - task: ArchiveFiles@2
     displayName: "Archive files"
