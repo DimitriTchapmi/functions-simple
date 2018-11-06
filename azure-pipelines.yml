@@ -11,7 +11,8 @@ steps:
     workingDirectory: hello
     displayName: "npm install into hello directory"
 
-  - bash: (cd hello2; npm install)
+  - bash: npm install
+    workingDirectory: hello2
     displayName: "npm install into hello2 directory"
 
   - task: ArchiveFiles@2
