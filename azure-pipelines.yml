@@ -7,16 +7,13 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-  - script: |
-      npm install
-    workingDirectory: hello
+  - script: npm install
+    workingDirectory: "./hello"
     displayName: "npm install into hello directory"
 
-  - script: |
-      npm install
-    workingDirectory: hello2
-    displayName: "npm install into hello directory"
-
+  - script: npm install
+    workingDirectory: "./hello2"
+    displayName: "npm install into hello2 directory"
 
   - task: ArchiveFiles@2
     displayName: "Archive files"
