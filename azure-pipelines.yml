@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 pool:
-  vmImage: 'custom-image'
+  vmImage: 'Dafault'
 
 steps:
   - script: npm install
