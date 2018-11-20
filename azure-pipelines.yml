@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 pool:
-  vmImage: 'linux-diordata'
+  vmImage: 'linux-diordata-agent'
 
 steps:
   - script: npm install
