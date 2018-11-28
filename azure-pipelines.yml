@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 pool:
-  vmImage: 'customUbuntu'
+  vmImage: 'customUbuntuAgent'
 
 steps:
   - script: npm install
